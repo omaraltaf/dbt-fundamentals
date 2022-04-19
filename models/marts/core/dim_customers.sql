@@ -52,7 +52,7 @@ customer_details as (
 final as (
     select 
         customers.*, 
-        customer_value.amount 
+        customer_value.amount as life_time_value
     from customers 
     left join customer_value using (customer_id)
 )
